@@ -81,8 +81,15 @@ var setCurrentAlbum = function(album) {
     }
 };
 
+var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+
+    songListContainer.addEventListener('mouseover', function(event) {
+        // #1
+        console.log(event.target);
+    });
 
     var albums = [albumPicasso, albumMarconi, albumBeetles];
     var index = 1;
